@@ -16,8 +16,6 @@ Proceed with caution and ensure that proper backups are in place before executin
 
 
 --Add a simple TRY...CATCH block to handle unexpected errors during script execution
-BEGIN TRY
-
 USE master;
 GO
 
@@ -44,9 +42,3 @@ CREATE SCHEMA silver;
 GO
 
 CREATE SCHEMA gold;
-GO
-
-END TRY
-BEGIN CATCH
-    PRINT 'An error occurred: ' + ERROR_MESSAGE();
-END CATCH;
